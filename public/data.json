@@ -1,0 +1,508 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co.com/BV7zYCNM/treeimge.jpg",
+    "title": "App One",
+    "companyName": "Hero Apps",
+    "description": "This is a productive app for daily tasks.",
+    "size": 25,
+    "reviews": 1024,
+    "ratingAvg": 4.5,
+    "downloads": 50000,
+    "ratings": [
+      { "name": "1 star", "count": 12 },
+      { "name": "2 star", "count": 24 },
+      { "name": "3 star", "count": 48 },
+      { "name": "4 star", "count": 200 },
+      { "name": "5 star", "count": 740 }
+    ]
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co.com/GfzX9QDd/Screensho.jpg",
+    "title": "App Two",
+    "companyName": "Hero Apps",
+    "description": "A useful app to organize your work.",
+    "size": 30,
+    "reviews": 2048,
+    "ratingAvg": 4.2,
+    "downloads": 75000,
+    "ratings": [
+      { "name": "1 star", "count": 22 },
+      { "name": "2 star", "count": 36 },
+      { "name": "3 star", "count": 102 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 1388 }
+    ]
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co.com/rKcGk47d/Screenshot-2025-10-08-111818.jpg",
+    "title": "App Three",
+    "companyName": "Hero Apps",
+    "description": "This app helps track your fitness goals.",
+    "size": 40,
+    "reviews": 3500,
+    "ratingAvg": 4.7,
+    "downloads": 90000,
+    "ratings": [
+      { "name": "1 star", "count": 18 },
+      { "name": "2 star", "count": 22 },
+      { "name": "3 star", "count": 60 },
+      { "name": "4 star", "count": 800 },
+      { "name": "5 star", "count": 2600 }
+    ]
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co.com/SDvRvJMz/Screenshot-2025-10-08-112134.jpg",
+    "title": "App Four",
+    "companyName": "Hero Apps",
+    "description": "Organize your notes efficiently.",
+    "size": 15,
+    "reviews": 1500,
+    "ratingAvg": 4.0,
+    "downloads": 45000,
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 50 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 520 }
+    ]
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co.com/qLZpT0Tx/Screenshot-2025-10-08-111910.jpg",
+    "title": "App Five",
+    "companyName": "Hero Apps",
+    "description": "A social app to connect with friends.",
+    "size": 50,
+    "reviews": 2500,
+    "ratingAvg": 4.3,
+    "downloads": 80000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 100 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 900 },
+      { "name": "5 star", "count": 1250 }
+    ]
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co.com/FkvzkFqT/Screenshot-2025-10-08-112038.jpg",
+    "title": "App Six",
+    "companyName": "Hero Apps",
+    "description": "Learn new skills with interactive lessons.",
+    "size": 60,
+    "reviews": 1800,
+    "ratingAvg": 4.1,
+    "downloads": 60000,
+    "ratings": [
+      { "name": "1 star", "count": 25 },
+      { "name": "2 star", "count": 45 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 1030 }
+    ]
+  },
+  {
+    "id": 7,
+    "image": "https://i.ibb.co.com/XxyYVQg9/Screenshot-2025-10-08-112109.jpg",
+    "title": "App Seven",
+    "companyName": "Hero Apps",
+    "description": "Plan your trips and travel easily.",
+    "size": 35,
+    "reviews": 900,
+    "ratingAvg": 4.4,
+    "downloads": 40000,
+    "ratings": [
+      { "name": "1 star", "count": 10 },
+      { "name": "2 star", "count": 20 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 470 }
+    ]
+  },
+  {
+    "id": 8,
+    "image": "https://i.ibb.co.com/0j8HpS2C/Screenshot-2025-10-08-111841.jpg",
+    "title": "App Eight",
+    "companyName": "Hero Apps",
+    "description": "Track your expenses and budget efficiently.",
+    "size": 20,
+    "reviews": 1200,
+    "ratingAvg": 4.6,
+    "downloads": 55000,
+    "ratings": [
+      { "name": "1 star", "count": 15 },
+      { "name": "2 star", "count": 25 },
+      { "name": "3 star", "count": 75 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 685 }
+    ]
+  },
+  {
+    "id": 9,
+    "image": "https://i.ibb.co.com/zKMw3Gb/Screenshot-2025-10-08-110942.jpg",
+    "title": "App Nine",
+    "companyName": "Hero Apps",
+    "description": "A health app to track meals and calories.",
+    "size": 28,
+    "reviews": 1400,
+    "ratingAvg": 4.2,
+    "downloads": 48000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 35 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 450 },
+      { "name": "5 star", "count": 745 }
+    ]
+  },
+  {
+    "id": 10,
+    "image": "https://i.ibb.co.com/1YbwQvg1/Screenshot-2025-10-08-111008.jpg",
+    "title": "App Ten",
+    "companyName": "Hero Apps",
+    "description": "A fitness app for daily workouts.",
+    "size": 22,
+    "reviews": 1100,
+    "ratingAvg": 4.3,
+    "downloads": 52000,
+    "ratings": [
+      { "name": "1 star", "count": 12 },
+      { "name": "2 star", "count": 22 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 366 }
+    ]
+  },
+  {
+    "id": 11,
+    "image": "https://i.ibb.co.com/0Vqd4srQ/Screenshot-2025-10-08-111135.jpg",
+    "title": "App Eleven",
+    "companyName": "Hero Apps",
+    "description": "App for productivity and time management.",
+    "size": 45,
+    "reviews": 1300,
+    "ratingAvg": 4.5,
+    "downloads": 68000,
+    "ratings": [
+      { "name": "1 star", "count": 15 },
+      { "name": "2 star", "count": 35 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 700 }
+    ]
+  },
+  {
+    "id": 12,
+    "image": "https://i.ibb.co.com/6J1QJGgk/Screenshot-2025-10-08-112201.jpg",
+    "title": "App Twelve",
+    "companyName": "Hero Apps",
+    "description": "Social networking app for friends and family.",
+    "size": 50,
+    "reviews": 2200,
+    "ratingAvg": 4.2,
+    "downloads": 90000,
+    "ratings": [
+      { "name": "1 star", "count": 45 },
+      { "name": "2 star", "count": 55 },
+      { "name": "3 star", "count": 180 },
+      { "name": "4 star", "count": 900 },
+      { "name": "5 star", "count": 1020 }
+    ]
+  },
+  {
+    "id": 13,
+    "image": "https://i.ibb.co.com/kdSR4yR/Screenshot-2025-10-08-111239.jpg",
+    "title": "App Thirteen",
+    "companyName": "Hero Apps",
+    "description": "Educational app with interactive lessons.",
+    "size": 60,
+    "reviews": 1800,
+    "ratingAvg": 4.6,
+    "downloads": 62000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 1200 }
+    ]
+  },
+  {
+    "id": 14,
+    "image": "https://i.ibb.co.com/pBZMLp6w/Screenshot-2025-10-08-111309.jpg",
+    "title": "App Fourteen",
+    "companyName": "Hero Apps",
+    "description": "Track your daily habits and routines.",
+    "size": 33,
+    "reviews": 1600,
+    "ratingAvg": 4.3,
+    "downloads": 50000,
+    "ratings": [
+      { "name": "1 star", "count": 18 },
+      { "name": "2 star", "count": 32 },
+      { "name": "3 star", "count": 140 },
+      { "name": "4 star", "count": 450 },
+      { "name": "5 star", "count": 970 }
+    ]
+  },
+  {
+    "id": 15,
+    "image": "https://i.ibb.co.com/dJVh0sfY/Screenshot-2025-10-08-111334.jpg",
+    "title": "App Fifteen",
+    "companyName": "Hero Apps",
+    "description": "Finance app to manage budgets and expenses.",
+    "size": 42,
+    "reviews": 2100,
+    "ratingAvg": 4.4,
+    "downloads": 75000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 160 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 1380 }
+    ]
+  },
+  {
+    "id": 16,
+    "image": "https://i.ibb.co.com/8LYwrMWf/Screenshot-2025-10-08-111357.jpg",
+    "title": "App Sixteen",
+    "companyName": "Hero Apps",
+    "description": "Travel app to explore new places.",
+    "size": 36,
+    "reviews": 1250,
+    "ratingAvg": 4.5,
+    "downloads": 48000,
+    "ratings": [
+      { "name": "1 star", "count": 12 },
+      { "name": "2 star", "count": 25 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 693 }
+    ]
+  },
+  {
+    "id": 17,
+    "image": "https://i.ibb.co.com/4wTcpK4r/Screenshot-2025-10-08-111421.jpg",
+    "title": "App Seventeen",
+    "companyName": "Hero Apps",
+    "description": "Health tracking app for wellness.",
+    "size": 28,
+    "reviews": 950,
+    "ratingAvg": 4.2,
+    "downloads": 42000,
+    "ratings": [
+      { "name": "1 star", "count": 15 },
+      { "name": "2 star", "count": 25 },
+      { "name": "3 star", "count": 90 },
+      { "name": "4 star", "count": 350 },
+      { "name": "5 star", "count": 470 }
+    ]
+  },
+  {
+    "id": 18,
+    "image": "https://i.ibb.co.com/sdPMkGC6/Screenshot-2025-10-08-111459.jpg",
+    "title": "App Eighteen",
+    "companyName": "Hero Apps",
+    "description": "Notes and reminders app for daily tasks.",
+    "size": 20,
+    "reviews": 1150,
+    "ratingAvg": 4.3,
+    "downloads": 50000,
+    "ratings": [
+      { "name": "1 star", "count": 18 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 582 }
+    ]
+  },
+  {
+    "id": 19,
+    "image": "https://i.ibb.co.com/fzv2rvbt/Screenshot-2025-10-08-111539.jpg",
+    "title": "App Nineteen",
+    "companyName": "Hero Apps",
+    "description": "Productivity app to manage tasks efficiently.",
+    "size": 38,
+    "reviews": 1700,
+    "ratingAvg": 4.5,
+    "downloads": 65000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 450 },
+      { "name": "5 star", "count": 1250 }
+    ]
+  },
+  {
+    "id": 20,
+    "image": "https://i.ibb.co.com/8DY9VBTh/Screenshot-2025-10-08-111608.jpg",
+    "title": "App Twenty",
+    "companyName": "Hero Apps",
+    "description": "Fitness and health app for daily exercises.",
+    "size": 32,
+    "reviews": 1600,
+    "ratingAvg": 4.4,
+    "downloads": "6M",
+    "ratings": [
+      { "name": "1 star", "count": 15 },
+      { "name": "2 star", "count": 28 },
+      { "name": "3 star", "count": 140 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 1017 }
+    ]
+  },
+  {
+    "id": 21,
+    "image": "https://i.ibb.co.com/60PXxs19/Screenshot-2025-10-08-111631.jpg",
+    "title": "App Twenty-One",
+    "companyName": "Hero Apps",
+    "description": "Learning app with interactive quizzes.",
+    "size": 45,
+    "reviews": 1900,
+    "ratingAvg": 4.6,
+    "downloads": "7M",
+    "ratings": [
+      { "name": "1 star", "count": 18 },
+      { "name": "2 star", "count": 35 },
+      { "name": "3 star", "count": 160 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 1187 }
+    ]
+  },
+  {
+    "id": 22,
+    "image": "https://i.ibb.co.com/G40mgKq5/Screenshot-2025-10-08-112223.jpg",
+    "title": "App Twenty-Two",
+    "companyName": "Hero Apps",
+    "description": "Travel planning app to explore easily.",
+    "size": 50,
+    "reviews": 1200,
+    "ratingAvg": 4.3,
+    "downloads": "5M",
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 990 }
+    ]
+  },
+  {
+    "id": 23,
+    "image": "https://i.ibb.co.com/QjmG2y8F/Screenshot-2025-10-08-112245.jpg",
+    "title": "App Twenty-Three",
+    "companyName": "Hero Apps",
+    "description": "Expense tracker and finance management.",
+    "size": 28,
+    "reviews": 1000,
+    "ratingAvg": 4.2,
+    "downloads": "4M",
+    "ratings": [
+      { "name": "1 star", "count": 12 },
+      { "name": "2 star", "count": 25 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 350 },
+      { "name": "5 star", "count": 513 }
+    ]
+  },
+  {
+    "id": 24,
+    "image": "https://i.ibb.co.com/V05Kbp8j/demo-app4.webp",
+    "title": "App Twenty-Four",
+    "companyName": "Hero Apps",
+    "description": "Daily planner and notes app.",
+    "size": 30,
+    "reviews": 1400,
+    "ratingAvg": 4.5,
+    "downloads": "5M",
+    "ratings": [
+      { "name": "1 star", "count": 15 },
+      { "name": "2 star", "count": 28 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 837 }
+    ]
+  },
+  {
+    "id": 25,
+    "image": "https://i.ibb.co.com/zVx0hR30/Screenshot-2025-10-08-112355.jpg",
+
+    "title": "App Twenty-Five",
+    "companyName": "Hero Apps",
+    "description": "Health and wellness tracking app.",
+    "size": 40,
+    "reviews": 1700,
+    "ratingAvg": 4.5,
+    "downloads": "6M",
+    "ratings": [
+      { "name": "1 star", "count": 18 },
+      { "name": "2 star", "count": 32 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 450 },
+      { "name": "5 star", "count": 1050 }
+    ]
+  },
+  {
+    "id": 26,
+    "image": "https://i.ibb.co.com/cSvWTW58/demo-app3.webp",
+    "title": "App Twenty-Six",
+    "companyName": "Hero Apps",
+    "description": "Interactive learning app for students.",
+    "size": 35,
+    "reviews": 1300,
+    "ratingAvg": 4.3,
+    "downloads": "5M",
+    "ratings": [
+      { "name": "1 star", "count": 12 },
+      { "name": "2 star", "count": 22 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 350 },
+      { "name": "5 star", "count": 816 }
+    ]
+  },
+  {
+    "id": 27,
+    "image": "https://i.ibb.co.com/QvS7yQLK/demo-app2.webp",
+    "title": "App Twenty-Seven",
+    "companyName": "Hero Apps",
+    "description": "Meditation and mindfulness app for daily calm.",
+    "size": 25,
+    "reviews": 900,
+    "ratingAvg": 4.4,
+    "downloads": "4M",
+    "ratings": [
+      { "name": "1 star", "count": 10 },
+      { "name": "2 star", "count": 15 },
+      { "name": "3 star", "count": 75 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 500 }
+    ]
+  },
+  {
+    "id": 28,
+
+    "image": "https://i.ibb.co.com/tTw9DPjq/Screenshot-2025-10-08-112318.jpg",
+    "title": "App Twenty-Eight",
+    "companyName": "Hero Apps",
+    "description": "Language learning app with interactive exercises.",
+    "size": 40,
+    "reviews": 1200,
+    "ratingAvg": 4.5,
+    "downloads": "5M",
+    "ratings": [
+      { "name": "1 star", "count": 15 },
+      { "name": "2 star", "count": 20 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 645 }
+    ]
+  }
+]
