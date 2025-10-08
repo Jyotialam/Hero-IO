@@ -11,6 +11,7 @@ const Home = () => {
   console.log(apps);
   const featuredApps = apps.slice(20, 28);
   return (
+    
     <div>
       <Banner />
       <div className="mt-[80px] text-center max-w-screen-xl">
@@ -32,10 +33,10 @@ const Home = () => {
               <p className="font-bold text-lg text-gray-800">{app.title}</p>
               <div className="card-end flex justify-between items-center font-bold">
                 <span className="flex items-center gap-1 text-sm text-[#00d390] bg-[#f1f5e8] py-2 px-4 rounded-lg">
-                  <PiDownloadSimpleBold className="text-xl" /> {app.downloads}
+                  <PiDownloadSimpleBold className="text-xl" /> {app.downloads}M
                 </span>
                 <span className="flex items-center text-sm gap-1 text-[#632EE3] bg-[#f1f5e8] py-2 px-4 rounded-lg">
-                  <HiMiniStar className="text-xl" /> {app.downloads}
+                  <HiMiniStar className="text-xl" /> {app.ratingAvg}
                 </span>
               </div>
             </div>

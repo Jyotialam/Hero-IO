@@ -1,15 +1,17 @@
 import { createBrowserRouter } from "react-router";
 import MainLayOut from "../LayOuts/MainLayOut";
-import Error from "../Pages/Error";
+
 import Home from "../Pages/Home";
 import Installation from "../Pages/Installation";
 import Apps from "../Pages/Apps";
+import ErrorPage from "../Pages/ErrorPage";
+// import ErrorPage from "../Pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: MainLayOut,
-    errorElement: Error,
+    errorElement: <ErrorPage/>,
     children: [
       {
         index: true,
@@ -25,5 +27,9 @@ const router = createBrowserRouter([
       },
     ],
   },
+  // {
+  //   path: '*',
+  //   element: <ErrorPage/>
+  // }
 ]);
 export default router;
