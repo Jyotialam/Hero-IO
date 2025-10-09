@@ -75,7 +75,7 @@ const NavBar = () => {
         </div>
         <div className="navbar-end">
           <Link
-            to="https://github.com/Jyotialam"
+            to="https://github.com/Jyotialam" target="_blank"
             className="btn text-white bg-gradient-to-r from-[#632EE3] to-[#9F62F2]"
           >
             <BsGithub /> Contribute

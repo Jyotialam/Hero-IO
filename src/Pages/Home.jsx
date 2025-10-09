@@ -59,6 +59,7 @@ const Home = () => {
           Show All
         </Link>
       </div>
+      
     </div>
   );
 };

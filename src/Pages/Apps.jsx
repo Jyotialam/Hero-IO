@@ -1,4 +1,6 @@
+
 import React, { useState } from "react";
+
 import useApps from "../CustomHooks/useApps";
 import { DiVisualstudio } from "react-icons/di";
 import { PiDownloadSimpleBold } from "react-icons/pi";
@@ -6,6 +8,7 @@ import { HiMiniStar } from "react-icons/hi2";
 import { Link } from "react-router";
 
 const Apps = () => {
+
   const { apps } = useApps();
   const [search, setSearch] = useState("");
   const term = search.trim().toLowerCase();
@@ -13,7 +16,9 @@ const Apps = () => {
   const searchedApps = term
     ? apps.filter((app) => app.title.toLowerCase().includes(term))
     : apps;
-  console.log(apps.id);
+
+
+  
 
   return (
     <div className="mt-[50px] text-center max-w-screen-xl mx-auto px-2">

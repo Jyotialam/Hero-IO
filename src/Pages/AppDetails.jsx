@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Link, useParams } from "react-router";
 import useApps from "../CustomHooks/useApps";
 import downloadIcon from "../assets/icon-downloads.png";
@@ -8,20 +7,21 @@ import {
   Bar,
   BarChart,
   CartesianGrid,
-  Cell,
   Legend,
   ResponsiveContainer,
   Tooltip,
   XAxis,
   YAxis,
 } from "recharts";
+// import { addInstalledApp } from "../Utility/addToInstalled";
+import { toast } from "react-toastify";
 
 const AppDetails = () => {
-  const [installed, setInstalled] = useState(false);
+  // const [installed, setInstalled] = useState(false);
   const { id } = useParams();
-  const { apps, loading, error } = useApps();
+  const { apps, loading } = useApps();
   const app = apps.find((ap) => String(ap.id) === id);
-  if (loading) return <p>Loading</p>;
+  if (loading) return <p>Loading.........</p>;
   const {
     image,
     title,
@@ -32,13 +32,24 @@ const AppDetails = () => {
     ratings,
     downloads,
     ratingAvg,
-  } = app;
+  } = app || {};
 
-  // const colors = ["#d32f2f", "#f57c00", "#fbc02d", "#388e3c", "#2e7d32"];
-  //
+  // const handleInstalled = (id) => {
+  //   addInstalledApp(id);
+  // };
   const handleInstalled = () => {
-    setInstalled(true);
-    alert("Successfully Installed!");
+    const existingList = JSON.parse(localStorage.getItem("installedList"));
+    let updatedList = [];
+    if (existingList) {
+      const isDuplicate = existingList.some((ap) => ap.id === app.id);
+      if (isDuplicate) return toast("sorry");
+
+      updatedList = [...existingList, app];
+      toast("✅ Successfully added");
+    } else {
+      updatedList.push(app);
+    }
+    localStorage.setItem("installedList", JSON.stringify(updatedList));
   };
 
   return (
@@ -73,10 +84,10 @@ const AppDetails = () => {
           <div className=" flex items-center">
             <button
               onClick={handleInstalled}
-              disabled={installed}
+              // disabled={installed}
               className="btn py-5 px-10 bg-[#008000] text-white rounded-lg"
             >
-              {installed ? "Installed" : `Install Now (${size} MB)`}
+              Install Now (${size} MB)
             </button>
           </div>
 
@@ -102,7 +113,7 @@ const AppDetails = () => {
           >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis type="number" />
-            <YAxis type="category" dataKey="name" width={80} reversed/>
+            <YAxis type="category" dataKey="name" width={80} reversed />
             <Tooltip />
             <Legend />
             <Bar dataKey="count" fill="#FF8811" />

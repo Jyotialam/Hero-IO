@@ -28,11 +28,20 @@ const Banner = () => {
         </i>
       </p>
       <div className="flex gap-2 justify-center items-center my-[40px] mx-auto">
-        <Link to="/" className="btn py-7 rounded-md shadow-sm">
+        <Link
+          to="https://play.google.com/store/games"
+          target="_blank"
+          className="btn py-7 rounded-md shadow-sm"
+        >
           <img src={playStoreImg} alt="PlayStore" />
           <span className="text-2xl font-bold">Google Play</span>
         </Link>
-        <Link to="/" className="btn py-7 rounded-md shadow-sm">
+
+        <Link
+          to="https://www.apple.com/app-store/"
+          target="_blank"
+          className="btn py-7 rounded-md shadow-sm"
+        >
           <img src={appStoreImg} alt="PlayStore" />
           <span className="text-2xl font-bold">App Store</span>
         </Link>
