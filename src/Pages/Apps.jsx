@@ -6,17 +6,17 @@ import { HiMiniStar } from "react-icons/hi2";
 import { Link } from "react-router";
 
 const Apps = () => {
-  const { apps, loading, setError } = useApps();
+  const { apps } = useApps();
   const [search, setSearch] = useState("");
   const term = search.trim().toLowerCase();
 
   const searchedApps = term
     ? apps.filter((app) => app.title.toLowerCase().includes(term))
     : apps;
-//   console.log(searchedApps);
+  console.log(apps.id);
 
   return (
-    <div className="mt-[50px] text-center max-w-screen-xl mx-auto">
+    <div className="mt-[50px] text-center max-w-screen-xl mx-auto px-2">
       <div className="mb-20">
         <h1 className="text-4xl text-gray-700 font-extrabold mb-2 flex justify-center items-center gap-2">
           Our All Applications{" "}
@@ -28,7 +28,7 @@ const Apps = () => {
       </div>
       {/*  */}
       <div className="flex justify-between items-center py-1 px-1">
-        <h1 className="text-3xl text-gray-700 font-bold">
+        <h1 className="lg:text-3xl md:text-2xl text-md text-gray-700 font-bold">
           <span>({searchedApps.length})</span> Apps Found
         </h1>
         {/*  */}
@@ -59,25 +59,25 @@ const Apps = () => {
         </label>
       </div>
       {/*  */}
+
       <div className="grid mt-[10px] grid-cols-1 py-5 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto">
         {searchedApps.map((app) => (
-          <div
-            key={app.id}
-            className="card bg-base-100 border border-gray-300 shadow-sm hover:scale-104 ease-in-out gap-4 p-4"
-          >
-            <figure>
-              <img src={app.image} alt="Furniture" className="rounded-3xl" />
-            </figure>
-            <p className="font-bold text-lg text-gray-800">{app.title}</p>
-            <div className="card-end flex justify-between items-center font-bold">
-              <span className="flex items-center gap-1 text-sm text-[#00d390] bg-[#f1f5e8] py-2 px-4 rounded-lg">
-                <PiDownloadSimpleBold className="text-xl" /> {app.downloads}M
-              </span>
-              <span className="flex items-center text-sm gap-1 text-[#632EE3] bg-[#f1f5e8] py-2 px-4 rounded-lg">
-                <HiMiniStar className="text-xl" /> {app.ratingAvg}
-              </span>
+          <Link to={`/app/${app.id}`} key={app.id}>
+            <div className="card bg-base-100 border border-gray-300 shadow-sm hover:scale-104 ease-in-out gap-4 p-4">
+              <figure>
+                <img src={app.image} alt="" className="rounded-3xl" />
+              </figure>
+              <p className="font-bold text-lg text-gray-800">{app.title}</p>
+              <div className="card-end flex justify-between items-center font-bold">
+                <span className="flex items-center gap-1 text-sm text-[#00d390] bg-[#f1f5e8] py-2 px-4 rounded-lg">
+                  <PiDownloadSimpleBold className="text-xl" /> {app.downloads}M
+                </span>
+                <span className="flex items-center text-sm gap-1 text-[#632EE3] bg-[#f1f5e8] py-2 px-4 rounded-lg">
+                  <HiMiniStar className="text-xl" /> {app.ratingAvg}
+                </span>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

@@ -9,7 +9,7 @@ import { MdOutlineInstallDesktop } from "react-icons/md";
 const NavBar = () => {
   const pages = (
     <>
-      <li className="">
+      <li>
         <NavLink
           to="/"
           className="flex items-center text-base text-gray-600 font-semibold"
@@ -74,9 +74,12 @@ const NavBar = () => {
           <ul className="menu menu-horizontal px-1">{pages}</ul>
         </div>
         <div className="navbar-end">
-          <button className="btn text-white bg-gradient-to-r from-[#632EE3] to-[#9F62F2]">
+          <Link
+            to="https://github.com/Jyotialam"
+            className="btn text-white bg-gradient-to-r from-[#632EE3] to-[#9F62F2]"
+          >
             <BsGithub /> Contribute
-          </button>
+          </Link>
         </div>
       </div>
     </div>

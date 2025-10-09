@@ -14,8 +14,8 @@ import { HiMiniStar } from "react-icons/hi2";
 
 const Banner = () => {
   return (
-    <div className="text-center w-full">
-      <h1 className="lg:text-[70px] md:text-[50px] text-[40px] font-bold">
+    <div className="text-center w-full md:mt-20 mt-10">
+      <h1 className="lg:text-[60px] md:text-[40px] text-[30px] font-extrabold">
         We Build <br /> <span className="text-[#935EEE]">Productive</span>{" "}
         <span className="text-[#392F5A]">Apps</span>
       </h1>
@@ -42,7 +42,7 @@ const Banner = () => {
         <img
           src={PhoneImg}
           alt=""
-          className="w-[250px] z-10 relative md:w-[300px] shadow-2xl bg-black rounded-t-[30px]"
+          className="lg:w-[300px] w-[100px] z-10 relative md:w-[200px] shadow-2xl bg-black rounded-t-[30px]"
         />
         {/*  */}
         <img src={icon1} alt="" className="absolute top-10 left-[350px] w-15" />
@@ -66,42 +66,51 @@ const Banner = () => {
           className="absolute top-10 right-[350px] w-15"
         />
         {/*Trusted reviews */}
-        <div className="absolute bottom-0 z-20 w-full bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white p-[50px] ">
-          <div className="text-center">
-            <h1 className="text-3xl font-bold mb-8">
+        <div className=" absolute bottom-0 text-center z-20 w-full bg-gradient-to-b from-[#632EE3] to-[#9F62F2] text-white lg:py-[50px] md:py-[30px] py-[10px]">
+          <div className="text-center lg:max-w-screen-lg max-w-screen-xl  mx-auto">
+            <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold mb-8">
               Trusted by Millions, Built for You
             </h1>
-            <div className="contentsParent grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-auto">
+
+            <div className="contentsParent grid grid-cols-1 gap-5 lg:grid-cols-3 lg:gap-2">
               {/*  */}
-              <div className="download flex justify-between items-center  ">
-                <div className="text-center w-[70%]">
+              <div className="text-center flex justify-center items-center ">
+                <div className="text-center">
                   <h3 className="font-semibold">Total Downloads</h3>
-                  <span className="text-[50px] font-bold">29.6M</span>
+                  <span className="lg:text-[50px] text-[30px] font-bold">
+                    29.6M
+                  </span>
                   <p className="text-sm">21% more than last month</p>
                 </div>
-                <span className="text-[70px] w-[30%]">
+                <span className="lg:text-[70px] text-[40px]">
                   <IoDownload />
                 </span>
               </div>
               {/*  */}
-              <div className="download flex justify-between items-center border-x border-gray-500">
-                <div className="text-center w-[70%]">
+
+              <div className="text-center flex justify-center items-center ">
+                <div className="text-center">
                   <h3 className="font-semibold">Total Reviews</h3>
-                  <span className="text-[50px] font-bold">906K</span>
+                  <span className="lg:text-[50px] text-[30px] font-bold">
+                    906K
+                  </span>
                   <p className="text-sm">46% more than last month</p>
                 </div>
-                <span className="text-[70px] w-[30%]">
+                <span className="lg:text-[70px] text-[40px]">
                   <HiMiniStar />
                 </span>
               </div>
+
               {/*  */}
-              <div className="download flex justify-between items-center  ">
-                <div className="text-center w-[70%]">
+              <div className="ActiveApps flex justify-center items-center">
+                <div className="text-center">
                   <h3 className="font-semibold">Active Apps</h3>
-                  <span className="text-[50px] font-bold">132+</span>
+                  <span className="lg:text-[50px] text-[30px] font-bold">
+                    132+
+                  </span>
                   <p className="text-sm">31 more will Launch</p>
                 </div>
-                <span className="text-[70px] w-[30%]">
+                <span className="lg:text-[70px] text-[40px]">
                   <IoLogoGooglePlaystore />
                 </span>
               </div>
