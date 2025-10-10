@@ -103,7 +103,7 @@ const Apps = () => {
               <Link
                 to="/apps"
                 onClick={() => setSearch("")}
-                className="btn rounded-xl text-white bg-[#332A51] py-6 mb-10 text-xl px-10 "
+                className="btn rounded-xl text-white bg-[#332A51] py-6 mb-10 text-xl px-5 "
               >
                 Browse Apps!
               </Link>
