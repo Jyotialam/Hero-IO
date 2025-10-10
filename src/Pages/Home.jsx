@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <div>
       <Banner />
-      <div className="mt-[80px] text-center max-w-screen-xl mx-auto px-2">
+      <div className="mt-[80px] text-center  w-11/12  mx-auto ">
         <h1 className="text-4xl text-gray-700 font-extrabold mb-2 flex justify-center items-center gap-2">
           Trending Apps <LuTrendingUp className="text-blue-700 text-[60px]" />
         </h1>

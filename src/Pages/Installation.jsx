@@ -47,7 +47,7 @@ const Installation = () => {
 
   return (
     <div>
-      <div className="container mx-auto text-center my-[80px]">
+      <div className="w-11/12 mx-auto text-center my-[80px]">
         <h1 className="text-[40px] font-bold flex justify-center text-gray-800 items-center gap-2">
           Your Installed Apps{" "}
           <SlSocialDropbox className="text-5xl text-[#5307f7]" />

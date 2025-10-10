@@ -5,7 +5,7 @@ import logoImg from "../assets/logo.png";
 const Footer = () => {
   return (
     <footer className="w-full bg-[#001931] ">
-      <div className="footer container mx-auto sm:footer-horizontal  text-neutral-content py-10  grid lg:grid-cols-5 md:grid-cols-4 grid-cols-2 gap-5  px-2">
+      <div className="footer  w-11/12 mx-auto sm:footer-horizontal text-neutral-content py-10  grid lg:grid-cols-5 md:grid-cols-4 grid-cols-2 gap-5  px-2">
         <aside className="flex flex-col gap-2 w-[220px]">
           <div className="flex items-center gap-2 ">
             <Link to="/">

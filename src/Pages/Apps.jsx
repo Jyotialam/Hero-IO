@@ -37,22 +37,22 @@ const Apps = () => {
 
   return (
     <div>
-      <div className="mt-[50px] text-center max-w-screen-xl mx-auto px-2">
+      <div className="mt-[50px] text-center w-11/12 mx-auto">
         <div className="mb-20">
           <h1 className="text-4xl text-gray-700 font-extrabold mb-2 flex justify-center items-center gap-2">
             Our All Applications{" "}
             <DiVisualstudio className="text-blue-700 text-[60px]" />
           </h1>
-          <p className="text-lg text-gray-400">
-            Explore All Apps on the Market developed by us. We code for Millions
+          <p className=" text-gray-400">
+            <i>Explore All Apps on the Market developed by us. We code for Millions</i>
           </p>
         </div>
 
         <div className="flex justify-between items-center py-1 px-1">
-          <h1 className="lg:text-3xl md:text-2xl text-md text-gray-700 font-bold">
+          <h1 className="lg:text-3xl md:text-2xl text-xl text-gray-700 font-bold">
             <span>({searchedApps.length})</span> Apps Found
           </h1>
-          <label className="relative bg-[#F5F5F5] rounded-md px-3 py-2 input input-primary">
+          <label className="relative md:w-[250px] w-[200px]  bg-[#F5F5F5] rounded-md px-3 py-2 input input-primary">
             <svg
               className="h-[1em] opacity-50"
               xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +105,7 @@ const Apps = () => {
                 onClick={() => setSearch("")}
                 className="btn rounded-xl text-white bg-[#332A51] py-6 mb-10 text-xl px-10 "
               >
-                Brows Apps!
+                Browse Apps!
               </Link>
             </div>
           </div>

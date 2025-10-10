@@ -57,7 +57,7 @@ const AppDetails = () => {
 
   return (
     <div className="w-full mt-[80px]">
-      <div className="flex px-4 flex-col md:flex-row gap-10 md:gap-20 items-center max-w-screen-xl mx-auto ">
+      <div className="flex px-4 flex-col md:flex-row gap-10 md:gap-20 items-center w-11/12 mx-auto ">
         <img
           src={image}
           alt=""
