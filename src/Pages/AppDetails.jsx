@@ -14,11 +14,12 @@ import {
   YAxis,
 } from "recharts";
 import { toast } from "react-toastify";
-
+import { useState } from "react";
 
 const AppDetails = () => {
   const { id } = useParams();
   const { apps, loading } = useApps();
+  const [clicked, setClicked] = useState(false);
   const app = apps.find((ap) => String(ap.id) === id);
   if (loading) return <p>Loading.........</p>;
   const {
@@ -33,14 +34,14 @@ const AppDetails = () => {
     ratingAvg,
   } = app || {};
   //
- 
-  
+
   const handleInstalled = () => {
+    setClicked(true);
     const existingList = JSON.parse(localStorage.getItem("installedList"));
     let updatedList = [];
     if (existingList) {
       const isDuplicate = existingList.some((ap) => ap.id === app.id);
-      if (isDuplicate) return 
+      if (isDuplicate) return;
 
       updatedList = [...existingList, app];
       toast("✅ Successfully added");
@@ -53,8 +54,12 @@ const AppDetails = () => {
   return (
     <div className="w-full mt-[80px]">
       <div className="flex px-4 flex-col md:flex-row gap-10 md:gap-20 items-center max-w-screen-xl mx-auto ">
-        <img src={image} alt="" className="rounded-2xl shadow-xl w-full md:w-[50%] object-cover " />
-        <div className="flex flex-col gap-2 w-full md:[50%]">
+        <img
+          src={image}
+          alt=""
+          className="rounded-2xl shadow-xl w-[300px] object-cover "
+        />
+        <div className="flex flex-col  w-full md:[50%]">
           <h2 className="font-bold text-3xl text-gray-800">{title}</h2>
           <p className="mb-2 text-sm">
             Developed by{" "}
@@ -62,7 +67,7 @@ const AppDetails = () => {
           </p>
           <div className="border-t  border-[#dedae9]"></div>
           {/*  */}
-          <div className=" pt-5 flex gap-5 items-center">
+          <div className=" pt-3 flex gap-15 items-center">
             <div className="flex flex-col gap-1 justify-center items-center">
               <img className="w-8" src={downloadIcon} alt="" />
               <span className="text-sm">Downloads</span>
@@ -82,10 +87,14 @@ const AppDetails = () => {
           <div className=" flex items-center pt-5 flex-col sm:flex-row gap-5 ">
             <button
               onClick={handleInstalled}
-              // disabled={installed}
-              className="btn w-full sm:w-auto skeleton py-5 px-10 bg-[#008000] text-white rounded-lg"
+              disabled={clicked}
+              className={
+                clicked
+                  ? "btn w-full sm:w-auto py-5 px-10 bg-[#008000] text-gray-500 rounded-lg"
+                  : "btn w-full sm:w-auto skeleton py-5 px-10 bg-[#008000] text-white rounded-lg"
+              }
             >
-              Install Now (${size} MB)
+              {clicked ? "✔ Installed" : `Install Now (${size} MB)`}
             </button>
           </div>
 
