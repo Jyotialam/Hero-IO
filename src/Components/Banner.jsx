@@ -8,7 +8,7 @@ import { HiMiniStar } from "react-icons/hi2";
 
 const Banner = () => {
   return (
-    <div className="text-center w-full md:mt-20 mt-10">
+    <div className="text-center container mx-auto md:mt-20 mt-10">
       <h1 className="lg:text-[60px] md:text-[40px] text-[30px] font-extrabold">
         We Build <br /> <span className="text-[#935EEE]">Productive</span>{" "}
         <span className="text-[#392F5A]">Apps</span>
