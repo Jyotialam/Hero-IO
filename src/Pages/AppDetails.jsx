@@ -14,7 +14,7 @@ import {
   YAxis,
 } from "recharts";
 import { toast } from "react-toastify";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ErrorPage from "./ErrorPage";
 import LoadingSpinner from "../Components/LoadingSpinner";
 
@@ -23,8 +23,16 @@ const AppDetails = () => {
   const { apps, loading, error } = useApps();
   const [clicked, setClicked] = useState(false);
   const app = apps.find((ap) => String(ap.id) === id);
+  //
+  useEffect(() => {
+    const savedList = JSON.parse(localStorage.getItem("installedList")) || [];
+    const isAlreadyInstalled = savedList.some((ap) => ap.id === app?.id);
+    if (isAlreadyInstalled) setClicked(true);
+  }, [app?.id]);
+
   if (loading) return <LoadingSpinner />;
   if (error) return <ErrorPage />;
+  //
 
   const {
     image,
@@ -40,19 +48,19 @@ const AppDetails = () => {
   //
 
   const handleInstalled = () => {
-    setClicked(true);
-    const existingList = JSON.parse(localStorage.getItem("installedList"));
-    let updatedList = [];
-    if (existingList) {
-      const isDuplicate = existingList.some((ap) => ap.id === app.id);
-      if (isDuplicate) return;
+    const existingList =
+      JSON.parse(localStorage.getItem("installedList")) || [];
+    const isDuplicate = existingList.some((ap) => ap.id === app.id);
 
-      updatedList = [...existingList, app];
-      toast("✅ Successfully added");
-    } else {
-      updatedList.push(app);
+    if (isDuplicate) {
+      toast("⚠ Already Installed!");
+      return;
     }
+
+    const updatedList = [...existingList, app];
     localStorage.setItem("installedList", JSON.stringify(updatedList));
+    toast("✅ Successfully Installed");
+    setClicked(true);
   };
 
   return (
@@ -64,7 +72,9 @@ const AppDetails = () => {
           className="rounded-2xl shadow-xl w-[250px] object-cover "
         />
         <div className="flex flex-col  w-full md:[50%]">
-          <h2 className="font-bold md:text-3xl text-2xl text-gray-800">{title}</h2>
+          <h2 className="font-bold md:text-3xl text-2xl text-gray-800">
+            {title}
+          </h2>
           <p className="mb-2 text-sm">
             Developed by{" "}
             <span className="text-[#632EE3] font-semibold ">{companyName}</span>

@@ -99,7 +99,7 @@ const Installation = () => {
             {installed.length === 0 && (
               <div className="  w-full text-center p-10 space-y-5">
                 <span className="text-6xl">🐣</span>
-                <h2 className="md:text-6xl text-4xl font-bold text-[#6C6C6D]">
+                <h2 className="md:text-6xl text-3xl font-bold text-[#6C6C6D]">
                   No Apps Found
                 </h2>
                 <Link

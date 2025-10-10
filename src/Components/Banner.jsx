@@ -22,7 +22,7 @@ const Banner = () => {
             experiences that truly make an impact.
           </i>
         </p>
-        <div className="flex gap-2 justify-center items-center my-[40px] mx-auto">
+        <div className="flex  gap-2 justify-center items-center my-[40px] mx-auto">
           <Link
             to="https://play.google.com/store/games"
             target="_blank"
