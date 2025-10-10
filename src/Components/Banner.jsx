@@ -40,9 +40,9 @@ const Banner = () => {
           <span className="text-2xl font-bold">App Store</span>
         </Link>
       </div>
-      {/*phone  */}
+
       <div className="flex flex-col justify-center items-center">
-        <img src={PhoneImg} alt="" className="px-4"/>
+        <img src={PhoneImg} alt="" className="px-4" />
 
         <div className=" w-full bg-gradient-to-b from-[#632EE3] to-[#9F62F2] text-white lg:py-[50px] md:py-[30px] py-[10px]">
           <div className="text-center lg:max-w-screen-lg max-w-screen-xl  mx-auto">
@@ -51,7 +51,6 @@ const Banner = () => {
             </h1>
 
             <div className="contentsParent grid grid-cols-1 gap-5 lg:grid-cols-3 lg:gap-2">
-              {/*  */}
               <div className="text-center flex justify-center items-center ">
                 <div className="text-center">
                   <h3 className="font-semibold">Total Downloads</h3>
@@ -64,7 +63,6 @@ const Banner = () => {
                   <IoDownload />
                 </span>
               </div>
-              {/*  */}
 
               <div className="text-center flex justify-center items-center ">
                 <div className="text-center">
@@ -79,7 +77,6 @@ const Banner = () => {
                 </span>
               </div>
 
-              {/*  */}
               <div className="ActiveApps flex justify-center items-center">
                 <div className="text-center">
                   <h3 className="font-semibold">Active Apps</h3>
@@ -92,7 +89,6 @@ const Banner = () => {
                   <IoLogoGooglePlaystore />
                 </span>
               </div>
-              {/*  */}
             </div>
           </div>
         </div>

@@ -15,13 +15,17 @@ import {
 } from "recharts";
 import { toast } from "react-toastify";
 import { useState } from "react";
+import ErrorPage from "./ErrorPage";
+import LoadingSpinner from "../Components/LoadingSpinner";
 
 const AppDetails = () => {
   const { id } = useParams();
-  const { apps, loading } = useApps();
+  const { apps, loading, error } = useApps();
   const [clicked, setClicked] = useState(false);
   const app = apps.find((ap) => String(ap.id) === id);
-  if (loading) return <p>Loading.........</p>;
+  if (loading) return <LoadingSpinner />;
+  if (error) return <ErrorPage />;
+
   const {
     image,
     title,
@@ -66,7 +70,7 @@ const AppDetails = () => {
             <span className="text-[#632EE3] font-semibold ">{companyName}</span>
           </p>
           <div className="border-t  border-[#dedae9]"></div>
-          {/*  */}
+
           <div className=" pt-3 flex gap-15 items-center">
             <div className="flex flex-col gap-1 justify-center items-center">
               <img className="w-8" src={downloadIcon} alt="" />
@@ -97,13 +101,11 @@ const AppDetails = () => {
               {clicked ? "✔ Installed" : `Install Now (${size} MB)`}
             </button>
           </div>
-
-          {/*  */}
         </div>
       </div>
-      {/*  */}
+
       <div className="border-t border-gray-400 my-5 container mx-auto"></div>
-      {/* chart */}
+
       <div className="space-y-3 container px-4 mx-auto">
         <h3 className="text-xl font-bold text-gray-700 mb-4">Ratings</h3>
 
@@ -127,7 +129,7 @@ const AppDetails = () => {
           </BarChart>
         </ResponsiveContainer>
       </div>
-      {/*  */}
+
       <div className="container md:px-0 px-4 mx-auto border-t border-gray-300 mt-[40px] mb-[80px]">
         <h1 className="text-3xl font-extrabold py-4">Description</h1>
         <p>{description}</p>
