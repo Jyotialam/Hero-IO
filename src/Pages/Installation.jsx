@@ -48,12 +48,14 @@ const Installation = () => {
   return (
     <div>
       <div className="w-11/12 mx-auto text-center my-[80px]">
-        <h1 className="text-[40px] font-bold flex justify-center text-gray-800 items-center gap-2">
-          Your Installed Apps{" "}
+        <h1 className="md:text-[40px] text-[30px] font-bold flex justify-center text-gray-800 items-center gap-2">
+          Your Installed Apps
           <SlSocialDropbox className="text-5xl text-[#5307f7]" />
         </h1>
         <p className="text-gray-500">
-          Explore All Trending Apps on the Market developed by us
+          Explore All Trending Apps on the Market{" "}
+          <br className="block md:hidden" />
+          developed by us
         </p>
         <div className="space-y-6 mt-10">
           <div className="flex justify-between p-3 items-center border-b border-gray-300">
@@ -93,11 +95,11 @@ const Installation = () => {
               </ul>
             </details>
           </div>
-          <div className="space-y-5 px-4">
+          <div className="space-y-5">
             {installed.length === 0 && (
               <div className="  w-full text-center p-10 space-y-5">
                 <span className="text-6xl">🐣</span>
-                <h2 className="text-6xl font-bold text-[#6C6C6D]">
+                <h2 className="md:text-6xl text-4xl font-bold text-[#6C6C6D]">
                   No Apps Found
                 </h2>
                 <Link
@@ -111,7 +113,7 @@ const Installation = () => {
             {installed.map((app) => (
               <div
                 key={app.id}
-                className="card card-side bg-base-100 flex md:gap-10 gap-5 border border-gray-200 shadow-md p-2 rounded-lg"
+                className="card card-side bg-base-100 flex md:gap-10 gap-2 border border-gray-200 shadow-md p-2 rounded-lg"
               >
                 <figure>
                   <img
@@ -122,11 +124,11 @@ const Installation = () => {
                 </figure>
                 <div className="flex justify-between items-center w-full">
                   <div className="space-y-4">
-                    <h3 className="text-[16px] md:text-[20px] text-gray-700 font-semibold">
+                    <h3 className="text-sm md:text-[20px] text-gray-700 font-semibold">
                       {app.title}
                     </h3>
 
-                    <div className=" flex gap-10 items-center">
+                    <div className=" flex md:gap-10 gap-5 items-center">
                       <div className="flex text-gray-700 text-sm flex-row gap-1 justify-center items-center">
                         <img className="w-4" src={downloadIcon} alt="" />
 
@@ -153,7 +155,7 @@ const Installation = () => {
 
                   <button
                     onClick={() => handleUninstall(app.id)}
-                    className="btn bg-[#00D390] text-white py-5 px-6"
+                    className="btn bg-[#00D390] text-white md:py-5 md:px-6"
                   >
                     Uninstall
                   </button>

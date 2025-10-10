@@ -61,10 +61,10 @@ const AppDetails = () => {
         <img
           src={image}
           alt=""
-          className="rounded-2xl shadow-xl w-[300px] object-cover "
+          className="rounded-2xl shadow-xl w-[250px] object-cover "
         />
         <div className="flex flex-col  w-full md:[50%]">
-          <h2 className="font-bold text-3xl text-gray-800">{title}</h2>
+          <h2 className="font-bold md:text-3xl text-2xl text-gray-800">{title}</h2>
           <p className="mb-2 text-sm">
             Developed by{" "}
             <span className="text-[#632EE3] font-semibold ">{companyName}</span>
