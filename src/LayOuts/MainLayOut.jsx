@@ -3,6 +3,7 @@ import NavBar from "../Components/NavBar";
 import { Outlet } from "react-router";
 import Footer from "../Components/Footer";
 import { ToastContainer } from "react-toastify";
+import "../App.css";
 
 const MainLayOut = () => {
   return (
@@ -12,7 +13,7 @@ const MainLayOut = () => {
         <Outlet />
       </div>
       <Footer />
-       <ToastContainer />
+      <ToastContainer />
     </div>
   );
 };

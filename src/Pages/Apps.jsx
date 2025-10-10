@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import useApps from "../CustomHooks/useApps";
 import { DiVisualstudio } from "react-icons/di";
@@ -12,6 +12,21 @@ import nodataImg from "../assets/App-Error.png";
 const Apps = () => {
   const { apps, loading, error } = useApps();
   const [search, setSearch] = useState("");
+
+  const [typing, setTyping] = useState(false);
+  const [value, setValue] = useState(search);
+
+  useEffect(() => {
+    if (!typing) return;
+
+    const timeout = setTimeout(() => {
+      setSearch(value);
+      setTyping(false);
+    }, 500);
+
+    return () => clearTimeout(timeout);
+  }, [value]);
+
   const term = search.trim().toLowerCase();
   if (loading) return <LoadingSpinner />;
   if (error) return <ErrorPage />;
@@ -37,8 +52,7 @@ const Apps = () => {
           <h1 className="lg:text-3xl md:text-2xl text-md text-gray-700 font-bold">
             <span>({searchedApps.length})</span> Apps Found
           </h1>
-
-          <label className="input input-primary bg-[#F5F5F5]  ">
+          <label className="relative bg-[#F5F5F5] rounded-md px-3 py-2 input input-primary">
             <svg
               className="h-[1em] opacity-50"
               xmlns="http://www.w3.org/2000/svg"
@@ -56,12 +70,22 @@ const Apps = () => {
               </g>
             </svg>
             <input
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
+              value={value}
+              onChange={(e) => {
+                setValue(e.target.value);
+                setTyping(true);
+              }}
               type="search"
-              required
-              placeholder="search Apps"
+              placeholder="Search Apps"
+              className=" bg-transparent "
             />
+
+            {/* Spinner */}
+            {typing && (
+              <div className="absolute right-3 top-1/2 -translate-y-1/2">
+                <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>
+              </div>
+            )}
           </label>
         </div>
 

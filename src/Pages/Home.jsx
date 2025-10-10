@@ -10,7 +10,6 @@ import ErrorPage from "./ErrorPage";
 
 const Home = () => {
   const { apps, loading, error } = useApps();
-  // console.log(apps);
   const featuredApps = apps.slice(20, 28);
   if (loading) return <LoadingSpinner />;
   if (error) return <ErrorPage />;
@@ -18,7 +17,6 @@ const Home = () => {
   return (
     <div>
       <Banner />
-
       <div className="mt-[80px] text-center max-w-screen-xl mx-auto px-2">
         <h1 className="text-4xl text-gray-700 font-extrabold mb-2 flex justify-center items-center gap-2">
           Trending Apps <LuTrendingUp className="text-blue-700 text-[60px]" />
