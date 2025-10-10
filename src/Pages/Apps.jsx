@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 
 import useApps from "../CustomHooks/useApps";
@@ -8,7 +7,6 @@ import { HiMiniStar } from "react-icons/hi2";
 import { Link } from "react-router";
 
 const Apps = () => {
-
   const { apps } = useApps();
   const [search, setSearch] = useState("");
   const term = search.trim().toLowerCase();
@@ -16,9 +14,6 @@ const Apps = () => {
   const searchedApps = term
     ? apps.filter((app) => app.title.toLowerCase().includes(term))
     : apps;
-
-
-  
 
   return (
     <div className="mt-[50px] text-center max-w-screen-xl mx-auto px-2">
@@ -65,26 +60,40 @@ const Apps = () => {
       </div>
       {/*  */}
 
-      <div className="grid mt-[10px] grid-cols-1 py-5 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto">
-        {searchedApps.map((app) => (
-          <Link to={`/app/${app.id}`} key={app.id}>
-            <div className="card bg-base-100 border border-gray-300 shadow-sm hover:scale-104 ease-in-out gap-4 p-4">
-              <figure>
-                <img src={app.image} alt="" className="rounded-3xl" />
-              </figure>
-              <p className="font-bold text-lg text-gray-800">{app.title}</p>
-              <div className="card-end flex justify-between items-center font-bold">
-                <span className="flex items-center gap-1 text-sm text-[#00d390] bg-[#f1f5e8] py-2 px-4 rounded-lg">
-                  <PiDownloadSimpleBold className="text-xl" /> {app.downloads}M
-                </span>
-                <span className="flex items-center text-sm gap-1 text-[#632EE3] bg-[#f1f5e8] py-2 px-4 rounded-lg">
-                  <HiMiniStar className="text-xl" /> {app.ratingAvg}
-                </span>
-              </div>
-            </div>
+      {searchedApps.length === 0 ? (
+        <div className="  w-full text-center p-10 space-y-5">
+          <span className="text-6xl">🐣</span>
+          <h2 className="text-6xl font-bold text-[#6C6C6D]">No Apps Found</h2>
+          <Link
+            to="/apps" onClick={() => setSearch("")}
+            className="btn rounded-xl text-white bg-[#332A51] py-6 mb-10 text-xl px-10 "
+          >
+            Show All Apps
           </Link>
-        ))}
-      </div>
+        </div>
+      ) : (
+        <div className="grid mt-[10px] grid-cols-1 py-5 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto">
+          {searchedApps.map((app) => (
+            <Link to={`/app/${app.id}`} key={app.id}>
+              <div className="card bg-base-100 border border-gray-300 shadow-sm hover:scale-104 ease-in-out gap-4 p-4">
+                <figure>
+                  <img src={app.image} alt="" className="rounded-3xl" />
+                </figure>
+                <p className="font-bold text-lg text-gray-800">{app.title}</p>
+                <div className="card-end flex justify-between items-center font-bold">
+                  <span className="flex items-center gap-1 text-sm text-[#00d390] bg-[#f1f5e8] py-2 px-4 rounded-lg">
+                    <PiDownloadSimpleBold className="text-xl" /> {app.downloads}
+                    M
+                  </span>
+                  <span className="flex items-center text-sm gap-1 text-[#632EE3] bg-[#f1f5e8] py-2 px-4 rounded-lg">
+                    <HiMiniStar className="text-xl" /> {app.ratingAvg}
+                  </span>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

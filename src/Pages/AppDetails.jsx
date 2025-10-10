@@ -13,11 +13,10 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-// import { addInstalledApp } from "../Utility/addToInstalled";
 import { toast } from "react-toastify";
+import { useState } from "react";
 
 const AppDetails = () => {
-  // const [installed, setInstalled] = useState(false);
   const { id } = useParams();
   const { apps, loading } = useApps();
   const app = apps.find((ap) => String(ap.id) === id);
@@ -33,16 +32,15 @@ const AppDetails = () => {
     downloads,
     ratingAvg,
   } = app || {};
-
-  // const handleInstalled = (id) => {
-  //   addInstalledApp(id);
-  // };
+  //
+ 
+  
   const handleInstalled = () => {
     const existingList = JSON.parse(localStorage.getItem("installedList"));
     let updatedList = [];
     if (existingList) {
       const isDuplicate = existingList.some((ap) => ap.id === app.id);
-      if (isDuplicate) return toast("sorry");
+      if (isDuplicate) return 
 
       updatedList = [...existingList, app];
       toast("✅ Successfully added");

@@ -3,6 +3,8 @@ import downloadIcon from "../assets/icon-downloads.png";
 import avgRatingIcon from "../assets/icon-ratings.png";
 import reviewIcon from "../assets/icon-review.png";
 import { IoIosArrowDown } from "react-icons/io";
+import { SlSocialDropbox } from "react-icons/sl";
+import { toast } from "react-toastify";
 
 const Installation = () => {
   const [installed, setInstalled] = useState([]);
@@ -15,17 +17,33 @@ const Installation = () => {
   const handleSort = (type) => {
     setSort(type);
     if (type === "low") {
-      const sortedByLow = [...installed].sort((a, b) => a.downloads - b.downloads);
+      const sortedByLow = [...installed].sort(
+        (a, b) => a.downloads - b.downloads
+      );
       setInstalled(sortedByLow);
     } else if (type === "high") {
-      const sortedByHigh = [...installed].sort((a, b) => b.downloads- a.downloads);
+      const sortedByHigh = [...installed].sort(
+        (a, b) => b.downloads - a.downloads
+      );
       setInstalled(sortedByHigh);
     }
+  };
+  //
+  const handleUninstall = (id) => {
+    const existingList =
+      JSON.parse(localStorage.getItem("installedList")) || [];
+    let updatedList = existingList.filter((ap) => ap.id !== id);
+    localStorage.setItem("installedList", JSON.stringify(updatedList));
+    setInstalled(updatedList);
+    toast("✅ Successfully UnInstalled");
   };
 
   return (
     <div className="container mx-auto text-center my-[80px]">
-      <h1 className="text-[40px] font-bold">Your Installed Apps</h1>
+      <h1 className="text-[40px] font-bold flex justify-center text-gray-800 items-center gap-2">
+        Your Installed Apps{" "}
+        <SlSocialDropbox className="text-5xl text-[#5307f7]" />
+      </h1>
       <p className="text-gray-500">
         Explore All Trending Apps on the Market developed by us
       </p>
@@ -69,7 +87,7 @@ const Installation = () => {
             </ul>
           </details>
         </div>
-        <div className="space-y-3">
+        <div className="space-y-5">
           {installed.map((app) => (
             <div
               key={app.id}
@@ -79,37 +97,46 @@ const Installation = () => {
                 <img
                   src={app.image}
                   alt={app.title}
-                  className="w-40 h-25 object-cover rounded-2xl"
+                  className="w-25 h-20 object-cover rounded-2xl"
                 />
               </figure>
-              <div className="space-y-4">
-                <h3 className="text-[20px] text-gray-700 font-semibold">
-                  {app.title}
-                </h3>
+              <div className="flex justify-between items-center w-full">
+                <div className="space-y-4">
+                  <h3 className="text-[20px] text-gray-700 font-semibold">
+                    {app.title}
+                  </h3>
 
-                <div className=" flex gap-10 items-center">
-                  <div className="flex text-gray-700 text-sm flex-row gap-1 justify-center items-center">
-                    <img className="w-4" src={downloadIcon} alt="" />
+                  <div className=" flex gap-10 items-center">
+                    <div className="flex text-gray-700 text-sm flex-row gap-1 justify-center items-center">
+                      <img className="w-4" src={downloadIcon} alt="" />
 
-                    <span className=" font-bold text-gray-700 text-sm">
-                      {app.downloads}M
-                    </span>
-                  </div>
-                  <div className="flex flex-row gap-1 justify-center items-center">
-                    <img className="w-4" src={avgRatingIcon} alt="" />
+                      <span className=" font-bold text-gray-700 text-sm">
+                        {app.downloads}M
+                      </span>
+                    </div>
+                    <div className="flex flex-row gap-1 justify-center items-center">
+                      <img className="w-4" src={avgRatingIcon} alt="" />
 
-                    <span className="text-gray-700 text-sm font-bold">
-                      {app.ratingAvg}
-                    </span>
-                  </div>
-                  <div className="flex flex-row gap-1 justify-center items-center">
-                    <img className="w-6" src={reviewIcon} alt="" />
+                      <span className="text-gray-700 text-sm font-bold">
+                        {app.ratingAvg}
+                      </span>
+                    </div>
+                    <div className="flex flex-row gap-1 justify-center items-center">
+                      <img className="w-6" src={reviewIcon} alt="" />
 
-                    <span className="text-gray-700 text-sm font-bold">
-                      {app.reviews}K
-                    </span>
+                      <span className="text-gray-700 text-sm font-bold">
+                        {app.reviews}K
+                      </span>
+                    </div>
                   </div>
                 </div>
+                {/* btn */}
+                <button
+                  onClick={() => handleUninstall(app.id)}
+                  className="btn bg-[#00D390] text-white py-5 px-6"
+                >
+                  Uninstall
+                </button>
               </div>
             </div>
           ))}

@@ -12,23 +12,39 @@ const NavBar = () => {
       <li>
         <NavLink
           to="/"
-          className="flex items-center text-base text-gray-600 font-semibold"
+          className={({ isActive }) =>
+            isActive
+              ? "flex items-center gap-1 text-base font-semibold border-b-2 border-purple-700 pb-1"
+              : "flex items-center gap-1 text-base text-gray-600 font-semibold"
+          }
         >
-          <TiHomeOutline className="text-xl text-gray-500" />
+          <TiHomeOutline className="text-xl" />
           Home
         </NavLink>
       </li>
-      <li className="">
+
+      <li>
         <NavLink
           to="/apps"
-          className="flex items-center text-base text-gray-600 font-semibold"
+          className={({ isActive }) =>
+            isActive
+              ? "flex items-center gap-1 text-base font-semibold border-b-2 border-purple-700 pb-1"
+              : "flex items-center gap-1 text-base text-gray-600 font-semibold"
+          }
         >
           <FaAppStore className="text-xl text-gray-500" />
           Apps
         </NavLink>
       </li>
-      <li className="text-base text-gray-600 font-semibold">
-        <NavLink to="/installation">
+      <li>
+        <NavLink
+          to="/installation"
+          className={({ isActive }) =>
+            isActive
+              ? "flex items-center gap-1 text-base font-semibold border-b-2 border-purple-700 pb-1"
+              : "flex items-center gap-1 text-base text-gray-600 font-semibold"
+          }
+        >
           <MdOutlineInstallDesktop className="text-xl text-gray-500" />
           Installation
         </NavLink>
@@ -75,7 +91,8 @@ const NavBar = () => {
         </div>
         <div className="navbar-end">
           <Link
-            to="https://github.com/Jyotialam" target="_blank"
+            to="https://github.com/Jyotialam"
+            target="_blank"
             className="btn text-white bg-gradient-to-r from-[#632EE3] to-[#9F62F2]"
           >
             <BsGithub /> Contribute

@@ -54,9 +54,9 @@ const Home = () => {
         {/* end */}
         <Link
           to="/apps"
-          className="btn text-white bg-gradient-to-r py-6 mb-10 text-xl px-10 from-[#632EE3] to-[#9F62F2]"
+          className="btn text-white bg-gradient-to-r py-7 mb-10 text-xl px-10 from-[#632EE3] to-[#9F62F2] rounded-lg"
         >
-          Show All
+          Show All Apps
         </Link>
       </div>
       

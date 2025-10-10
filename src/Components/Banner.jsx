@@ -2,13 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 import playStoreImg from "../assets/play-store.png";
 import appStoreImg from "../assets/app-store.png";
-import PhoneImg from "../assets/Iphone.png";
-import icon1 from "../assets/Ellipse24.png";
-import icon2 from "../assets/Ellipse25.png";
-import icon3 from "../assets/Ellipse26.png";
-import icon4 from "../assets/Ellipse27.png";
-import icon5 from "../assets/Ellipse28.png";
-import icon6 from "../assets/Ellipse29.png";
+import PhoneImg from "../assets/hero.png";
 import { IoDownload, IoLogoGooglePlaystore } from "react-icons/io5";
 import { HiMiniStar } from "react-icons/hi2";
 
@@ -47,35 +41,10 @@ const Banner = () => {
         </Link>
       </div>
       {/*phone  */}
-      <div className="relative  flex flex-col justify-center items-center">
-        <img
-          src={PhoneImg}
-          alt=""
-          className="lg:w-[300px] w-[100px] z-10 relative md:w-[200px] shadow-2xl bg-black rounded-t-[30px]"
-        />
-        {/*  */}
-        <img src={icon1} alt="" className="absolute top-10 left-[350px] w-15" />
-        <img src={icon3} alt="" className="absolute top-35 left-[300px] w-15" />
-        <img src={icon5} alt="" className="absolute top-60 left-[260px] w-15" />
-        {/*  */}
-        <img
-          src={icon6}
-          alt=""
-          className="absolute top-60 right-[260px] w-15"
-        />
+      <div className="flex flex-col justify-center items-center">
+        <img src={PhoneImg} alt="" />
 
-        <img
-          src={icon4}
-          alt=""
-          className="absolute top-35 right-[300px] w-15"
-        />
-        <img
-          src={icon2}
-          alt=""
-          className="absolute top-10 right-[350px] w-15"
-        />
-        {/*Trusted reviews */}
-        <div className=" absolute bottom-0 text-center z-20 w-full bg-gradient-to-b from-[#632EE3] to-[#9F62F2] text-white lg:py-[50px] md:py-[30px] py-[10px]">
+        <div className=" w-full bg-gradient-to-b from-[#632EE3] to-[#9F62F2] text-white lg:py-[50px] md:py-[30px] py-[10px]">
           <div className="text-center lg:max-w-screen-lg max-w-screen-xl  mx-auto">
             <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold mb-8">
               Trusted by Millions, Built for You
