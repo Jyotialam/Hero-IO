@@ -42,7 +42,7 @@ const Banner = () => {
       </div>
       {/*phone  */}
       <div className="flex flex-col justify-center items-center">
-        <img src={PhoneImg} alt="" />
+        <img src={PhoneImg} alt="" className="px-4"/>
 
         <div className=" w-full bg-gradient-to-b from-[#632EE3] to-[#9F62F2] text-white lg:py-[50px] md:py-[30px] py-[10px]">
           <div className="text-center lg:max-w-screen-lg max-w-screen-xl  mx-auto">

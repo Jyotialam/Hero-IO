@@ -14,7 +14,7 @@ import {
   YAxis,
 } from "recharts";
 import { toast } from "react-toastify";
-import { useState } from "react";
+
 
 const AppDetails = () => {
   const { id } = useParams();
@@ -52,9 +52,9 @@ const AppDetails = () => {
 
   return (
     <div className="w-full mt-[80px]">
-      <div className="flex items-center gap-20 mb-[40px]  max-w-screen-xl mx-auto">
-        <img src={image} alt="" className="rounded-2xl shadow-xl" />
-        <div className="flex flex-col gap-2 w-full">
+      <div className="flex px-4 flex-col md:flex-row gap-10 md:gap-20 items-center max-w-screen-xl mx-auto ">
+        <img src={image} alt="" className="rounded-2xl shadow-xl w-full md:w-[50%] object-cover " />
+        <div className="flex flex-col gap-2 w-full md:[50%]">
           <h2 className="font-bold text-3xl text-gray-800">{title}</h2>
           <p className="mb-2 text-sm">
             Developed by{" "}
@@ -79,11 +79,11 @@ const AppDetails = () => {
               <span className="text-3xl font-bold">{reviews}K</span>
             </div>
           </div>
-          <div className=" flex items-center">
+          <div className=" flex items-center pt-5 flex-col sm:flex-row gap-5 ">
             <button
               onClick={handleInstalled}
               // disabled={installed}
-              className="btn py-5 px-10 bg-[#008000] text-white rounded-lg"
+              className="btn w-full sm:w-auto skeleton py-5 px-10 bg-[#008000] text-white rounded-lg"
             >
               Install Now (${size} MB)
             </button>
@@ -95,7 +95,7 @@ const AppDetails = () => {
       {/*  */}
       <div className="border-t border-gray-400 my-5 container mx-auto"></div>
       {/* chart */}
-      <div className="space-y-3 container mx-auto">
+      <div className="space-y-3 container px-4 mx-auto">
         <h3 className="text-xl font-bold text-gray-700 mb-4">Ratings</h3>
 
         <ResponsiveContainer width="100%" height={300}>
@@ -119,7 +119,7 @@ const AppDetails = () => {
         </ResponsiveContainer>
       </div>
       {/*  */}
-      <div className="container mx-auto border-t border-gray-300 mt-[40px] mb-[80px]">
+      <div className="container md:px-0 px-4 mx-auto border-t border-gray-300 mt-[40px] mb-[80px]">
         <h1 className="text-3xl font-extrabold py-4">Description</h1>
         <p>{description}</p>
       </div>

@@ -83,7 +83,7 @@ const NavBar = () => {
 
           <Link className="flex items-center" to="/">
             <img className="w-15" src={logoImg} alt="" />
-            <h2 className="text-2xl font-bold text-[#632EE3]">HERO.IO</h2>
+            <h2 className="text-2xl font-bold text-[#632EE3]">APPORA.IO</h2>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
